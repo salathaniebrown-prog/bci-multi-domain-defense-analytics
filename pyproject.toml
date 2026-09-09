@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bci-multi-domain-defense-analytics"
+version = "0.1.0"
+description = "Simulation-first BCI and multi-domain telemetry analytics framework"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["numpy>=1.26,<3"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "flake8>=7"]
+
+[project.scripts]
+run-telemetry = "bci_defense_analytics.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
